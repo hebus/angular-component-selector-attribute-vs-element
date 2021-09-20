@@ -2,19 +2,19 @@
 <div class="container">
   <div *ngFor="let i of ['1', '2', '3']">{{ i }}</div>
 
-  // ici le composant est inclus dans chaque "child"
+  <!-- // ici le composant est inclus dans chaque "child"
   // rendu HTML
   // -------------------------------------------------------
   // <div class="child"><template du composant board-dnd-list></div>
   // <div class="child"><template du composant board-dnd-list></div>
   // <div class="child"><template du composant board-dnd-list></div>
-  // -------------------------------------------------------
+  // ------------------------------------------------------- -->
   <div class="child"
     *ngFor="let i of ['1', '2', '3']" board-dnd-list
     [name]="i"
   ></div>
 
-  // ici le composant est encapsuler dans le container "child2"
+  <!-- // ici le composant est encapsuler dans le container "child2"
   // rendu HTML
   // -------------------------------------------------------
   // <div class="child2">
@@ -22,7 +22,7 @@
   //    <board-dnd-list><template du composant></board-dnd-list>
   //    <board-dnd-list><template du composant></board-dnd-list>
   // </div>
-  // -------------------------------------------------------
+  // ------------------------------------------------------- -->
   <div class="child2">
     <board-dnd-list *ngFor="let i of ['1','2','3']" [name]="i"></board-dnd-list>
   </div>
